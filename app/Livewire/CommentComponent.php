@@ -41,6 +41,10 @@ class CommentComponent extends Component
     }
     public function update()
     {
+        $this->validate([
+            'name' => "required|string|max:255",
+            'comment' => "required|string",
+        ]);
         $this->update_comment->update([
             'name' => $this->name,
             'comment' => $this->comment
