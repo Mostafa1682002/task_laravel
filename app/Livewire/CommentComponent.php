@@ -56,6 +56,7 @@ class CommentComponent extends Component
     {
         $this->addComment = true;
         $this->editComment = false;
+        $this->reset(['name', 'comment']);
     }
 
     public function destroy($id)
